@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glory Asia Energy | Home</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandNavy: '#183058',
+            brandOrange: '#F29631',
+            brandBlue: '#5176A2',
+          },
+          animation: {
+            'bounce-slow': 'bounce 3s infinite',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Scroll Reveal & Utilities Styles -->
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-[#F29631] selection:text-white">
+<!-- Navbar: White Version -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white py-3 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-12">
+    
+          <!-- Logo-->
+<a href="index.html" class="flex items-center space-x-3 group">
+  <div class="transform group-hover:scale-105 transition-transform duration-300 shrink-0">
+    <img src="images/favic.png" alt="Glory Asia Energy" class="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-md" />
+  </div>
+  
+  <!-- Susunan Teks Menegak (Column) -->
+  <div class="flex flex-col">
+    <!-- Baris 1: GLORY ASIA ENERGY -->
+    <div class="flex items-center space-x-1.5">
+      <span class="text-base sm:text-lg font-black tracking-wide uppercase leading-tight text-[#183058]">GLORY ASIA</span>
+      <span class="text-base sm:text-lg font-black tracking-wide uppercase leading-tight text-[#F29631]">ENERGY</span>
+    </div>
+    
+    <!-- Baris 2: Powered by -->
+    <span class="text-[10px] sm:text-[11px] font-medium text-slate-500 tracking-wider">
+      Powered by Glory Asia Sdn Bhd
+    </span>
+  </div>
+</a>
+          
+
+
+            <!-- Desktop Menu (Grouped with Dropdowns) -->
+            <div class="hidden lg:flex space-x-6 items-center">
+                
+                <!-- Dropdown 1: Company -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 text-xs font-bold tracking-wider uppercase text-slate-600 group-hover:text-gae-orange py-2 transition-colors focus:outline-none">
+                        Company
+                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Dropdown Content -->
+                    <div class="absolute top-full -left-4 mt-2 w-48 bg-white border border-slate-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2">
+                        <a href="about.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">About Us</a>
+                        <a href="pillars.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">Value Pillars</a>
+                        <a href="team.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">Management Team</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown 2: Operations -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 text-xs font-bold tracking-wider uppercase text-slate-600 group-hover:text-gae-orange py-2 transition-colors focus:outline-none">
+                        Operations
+                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Dropdown Content -->
+                    <div class="absolute top-full -left-4 mt-2 w-52 bg-white border border-slate-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2">
+                        <a href="expertise.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">Core Expertise</a>
+                        <a href="track-record.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">Track Record</a>
+                        <a href="workpack.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">Workpacks</a>
+                        <a href="consortium.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-gae-orange transition-colors">Consortium</a>
+                    </div>
+                </div>
+
+                <!-- Single Link: Gallery -->
+                <a href="gallery.html" class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-gae-orange py-2 transition-colors">Gallery</a>
+
+                <!-- CTA Button -->
+                <a href="contact.html" class="bg-[#F29631] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase hover:bg-orange-600 transition-all shadow-md hover:shadow-orange-500/40 hover:-translate-y-0.5 ml-2">
+                    Partner With Us
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden flex items-center">
+                <button id="mobile-menu-btn" class="focus:outline-none transition-colors text-[#183058] p-1">
+                    <i data-lucide="menu" id="menu-icon-open" class="w-7 h-7"></i>
+                    <i data-lucide="x" id="menu-icon-close" class="w-7 h-7 hidden"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu (Organized by Categories) -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full shadow-2xl mt-2 pb-6 px-4 max-h-[80vh] overflow-y-auto">
+        <div class="flex flex-col space-y-1 mt-2 text-center">
+            
+            <!-- Category: Company -->
+            <div class="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1 mt-4">Company</div>
+            <a href="about.html" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">About Us</a>
+            <a href="pillars.html" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Value Pillars</a>
+            <a href="team.html" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Management Team</a>
+
+            <!-- Category: Operations -->
+            <div class="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1 mt-4">Operations</div>
+            <a href="expertise.html" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Core Expertise</a>
+            <a href="track-record.html" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Track Record</a>
+            <a href="workpack.html" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Workpacks</a>
+            <a href="consortium.html" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Consortium</a>
+
+            <!-- Category: Media & Contact -->
+            <div class="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1 mt-4">Media</div>
+            <a href="gallery.html" class="mobile-link block px-4 py-2 text-slate-600 text-sm font-bold tracking-wide uppercase hover:bg-blue-50 hover:text-[#183058] rounded-xl transition-colors">Gallery</a>
+
+            <!-- Mobile CTA Button -->
+            <div class="mt-4 pt-4 border-t border-slate-100">
+                <a href="contact.html" class="mobile-link block bg-[#F29631] text-white px-4 py-3 rounded-xl text-sm font-bold tracking-wide uppercase hover:bg-orange-600 transition-colors shadow-sm">Partner With Us</a>
+            </div>
+            
+        </div>
+    </div>
+</nav>
+<main>
+<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-[#183058]">
+        <!-- Background Effects -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5176A2]/30 rounded-full mix-blend-screen filter blur-[80px] opacity-60 animate-pulse"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#F29631]/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50"></div>
+        
+        <!-- Background Image & Overlay -->
+        <div class="absolute inset-0 z-0">
+          <img 
+            src="images/firstpage.png" 
+            alt="Industrial Energy" 
+            class="w-full h-full object-cover opacity-40"
+          >
+          <div class="absolute inset-0 bg-gradient-to-br from-[#183058] via-[#183058]/95 to-transparent"></div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-28 pb-16">
+          <div class="max-w-3xl">
+            
+            <!-- Badge -->
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md">
+              <span class="w-2 h-2 rounded-full bg-[#F29631] animate-ping"></span>
+              <span class="w-2 h-2 rounded-full bg-[#F29631] absolute"></span>
+              <span class="pl-2">PIONEERING TECHNOLOGY & SUSTAINABLE ENERGY</span>
+            </div>
+            
+            <!-- Headline -->
+            <h1 class="text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] mb-6 tracking-tight">
+          Glory Asia <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F29631] to-yellow-400 drop-shadow-sm">Energy</span>
+        </h1>
+            
+            
+            <!-- Description -->
+            <p class="text-base md:text-xl text-blue-100/80 mb-10 leading-relaxed font-light max-w-2xl">
+              Empowering Global Energy Transformation through Mineral Resource Development & Advanced Oil &
+              Gas Engineering Services. Led by Founder & Group President, Mr. David Xu-driven by "Technology-
+              Enabled, Green-Driven, Value-Creating" core concepts.
+            </p>
+            
+            <!-- Call to Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#expertise" class="flex items-center justify-center bg-[#F29631] text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-orange-500 transition-all shadow-[0_0_20px_rgba(242,150,49,0.3)] hover:shadow-[0_0_30px_rgba(242,150,49,0.5)] hover:-translate-y-0.5">
+                Explore Solutions 
+                <!-- SVG Arrow Right -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+              
+              <a href="#consortium" class="flex items-center justify-center bg-transparent text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider border border-white/30 hover:border-white hover:bg-white/10 transition-all">
+                Our Partnerships
+              </a>
+            </div>
+            
+          </div>
+        </div>
+    </section>
+<section class="relative -mt-12 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl border border-white/50 p-6 lg:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+        
+        <div class="flex items-center space-x-4 px-2 group cursor-default">
+          <div class="w-12 h-12 bg-gradient-to-br from-orange-100 to-orange-50 rounded-xl flex items-center justify-center text-[#F29631] flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-inner">
+            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <p class="text-2xl font-black text-[#183058] leading-none mb-1">&gt;30M</p>
+            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Tonnes of Reserves (Fluorite, Pb-Zn, etc.)</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4 px-2 pt-4 md:pt-0 group cursor-default">
+          <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center text-[#5176A2] flex-shrink-0 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300 shadow-inner">
+            <i data-lucide="globe-2" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <p class="text-2xl font-black text-[#183058] leading-none mb-1">&gt;20B</p>
+            <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">RMB Corporate Valuation</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4 px-2 pt-4 md:pt-0 group cursor-default">
+          <div class="w-12 h-12 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-inner">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <p class="text-2xl font-black text-[#183058] leading-none mb-1">36</p>
+            <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Technical Patents (40% Inventions)</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.lucide) lucide.createIcons();
+
+  // Mobile navigation
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const openIcon = document.getElementById('menu-icon-open');
+  const closeIcon = document.getElementById('menu-icon-close');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (openIcon) openIcon.classList.toggle('hidden');
+      if (closeIcon) closeIcon.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        if (openIcon) openIcon.classList.remove('hidden');
+        if (closeIcon) closeIcon.classList.add('hidden');
+      });
+    });
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('active'));
+  }
+
+  // Gallery filtering + lightbox (only when the gallery exists)
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const modal = document.getElementById('media-modal');
+
+  if (filterBtns.length && galleryItems.length) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-[#F29631]', 'text-white', 'shadow-lg', 'shadow-orange-500/30');
+          b.classList.add('bg-slate-800/80', 'text-slate-300', 'hover:bg-slate-700', 'border', 'border-slate-700');
+        });
+        btn.classList.add('bg-[#F29631]', 'text-white', 'shadow-lg', 'shadow-orange-500/30');
+        btn.classList.remove('bg-slate-800/80', 'text-slate-300', 'hover:bg-slate-700', 'border', 'border-slate-700');
+
+        galleryItems.forEach(item => {
+          const category = item.dataset.category;
+          const type = item.dataset.type;
+          item.style.display =
+            filter === 'all' || category === filter || (filter === 'video' && type === 'video')
+              ? 'block' : 'none';
+        });
+      });
+    });
+  }
+
+  if (modal && galleryItems.length) {
+    const container = document.getElementById('modal-media-container');
+    const categoryEl = document.getElementById('modal-category');
+    const titleEl = document.getElementById('modal-title');
+    const descEl = document.getElementById('modal-desc');
+    const closeBtn = document.getElementById('close-modal');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const type = item.dataset.type;
+        const src = item.dataset.src;
+        categoryEl.textContent = (item.dataset.category || '').toUpperCase();
+        titleEl.textContent = item.dataset.title || '';
+        descEl.textContent = item.dataset.desc || '';
+
+        container.innerHTML = type === 'video'
+          ? `<div class="aspect-video w-full"><video controls autoplay class="w-full h-full object-contain"><source src="${src}" type="video/mp4"></video></div>`
+          : `<div class="max-h-[70vh]"><img src="${src}" alt="${item.dataset.title || ''}" class="max-h-[70vh] w-auto object-contain"></div>`;
+
+        modal.classList.remove('hidden');
+      });
+    });
+
+    const closeModal = () => {
+      modal.classList.add('hidden');
+      container.innerHTML = '';
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', e => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+  }
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const current = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === current) a.classList.add('text-[#F29631]');
+  });
+});
+</script>
+
+</body>
+</html>
